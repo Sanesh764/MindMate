@@ -1,21 +1,121 @@
+/* General page styling with a dark wallpaper */
+body {
+  background: linear-gradient(to bottom, #1a1a1a, #333); /* Dark gradient wallpaper */
+  font-family: 'Roboto', sans-serif; /* Modern, clean font */
+  color: #fff; /* White text for contrast */
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Full height for a centered layout */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Chat container styling */
 .chat-container {
-    width: 400px;
-    height: 500px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-  }
-  
-  #chat-window {
-    height: 80%;
-    overflow-y: scroll;
-    padding: 10px;
-  }
-  
-  input, button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 5px;
-  }
+  max-width: 600px;
+  width: 90%; /* Responsive width for smaller screens */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners for a modern look */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title styling */
+h1 {
+  text-align: center;
+  color: #fff; /* White for visibility */
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Chat window styling */
+#chat-window {
+  height: 400px; /* Fixed height for consistency */
+  overflow-y: scroll; /* Scrollable for long conversations */
+  background-color: #222; /* Slightly lighter dark background */
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column; /* Stack messages vertically */
+}
+
+/* Custom scrollbar for a polished look */
+#chat-window::-webkit-scrollbar {
+  width: 10px;
+}
+
+#chat-window::-webkit-scrollbar-track {
+  background: #333; /* Matches the dark theme */
+}
+
+#chat-window::-webkit-scrollbar-thumb {
+  background: #555; /* Slightly lighter for contrast */
+  border-radius: 5px;
+}
+
+/* User message styling */
+.user-message {
+  background-color: #005c99; /* Vibrant blue for user messages */
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px 0;
+  max-width: 80%; /* Prevents messages from stretching too wide */
+  align-self: flex-end; /* Aligns to the right */
+}
+
+/* Bot message styling */
+.bot-message {
+  background-color: #444; /* Neutral gray for bot messages */
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px 0;
+  max-width: 80%;
+  align-self: flex-start; /* Aligns to the left */
+}
+
+/* Input area styling */
+.input-area {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Space between input and button */
+}
+
+/* Input field styling */
+#user-input {
+  flex: 1; /* Takes up available space */
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #444; /* Dark background */
+  color: #fff;
+}
+
+#user-input::placeholder {
+  color: #aaa; /* Visible placeholder text */
+}
+
+#user-input:focus {
+  outline: none;
+  box-shadow: 0 0 5px #005c99; /* Blue glow on focus */
+}
+
+/* Send button styling */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #005c99; /* Matches user message color */
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #007acc; /* Lighter blue on hover */
+}
   
